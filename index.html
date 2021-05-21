@@ -5,9 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!--Link to style.css-->
+    <!--<link rel="stylesheet" type="text/css" href="assets/css/style.css">-->
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    
 </head>
 <body>
+
+    <!-- Creates the Overall Grid -->
+    <div class="container">
+        <!--Weather Dashboard Header-->
+        <header class="row">
+            <div class="col-sm-12 bg-primary">
+            <h1 class="text-white text-center">Weather Dashboard</h1>
+            </div>
+        </header>
+
+        <main class="flex-row justify-space-between">
+            <!--Begin Search for a City-->
+            <div class="col-12 col-md-4">
+              <div class="card">
+                <h3 class="card-header text-uppercase">Search for a City:</h3>
+                <form id="user-form" class="card-body">
+                  <input name="city" id="city" type="text" autofocus="true" class="form-input" />
+                  <button type="submit" class="btn bg-primary text-white text-center">Search</button>
+                </form>
+              </div>
+        
+              <!--Past City Searches-->
+              <div class="card">
+              </div>
+        
+            <!--Search Results Current Day-->
+            <div class="col-12 col-md-8">
+              <h2 class="subtitle"><span id="search-term"></span></h2>
+              <div id="currentDayWeather" class="outline-solid">
+        
+              </div>
+            </div>
+
+            <!--5-Day Forecast-->
+          </main>
+
+    </div>
     
 </body>
 </html>
