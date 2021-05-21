@@ -12,44 +12,55 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-
-    <!-- Creates the Overall Grid -->
-    <div class="container">
-        <!--Weather Dashboard Header/Navbar-->
-        <nav class="navbar navbar-dark bg-primary">
-            <div class="col-sm-12">
+    <!--Weather Dashboard Header/Navbar-->
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="col-sm-12">
             <h1 class="text-white text-center">Weather Dashboard</h1>
-            </div>
-        </nav>
+        </div>
+    </nav>
 
-       <!----> <main class="flex-row justify-space-between"> -->
-        <main>   
-        <!--Begin Search for a City-->
-            <div class="col-12 col-md-4">
-              <div class="card">
-                <h3 class="card-header text-uppercase">Search for a City:</h3>
-                <form id="user-form" class="card-body">
-                  <input name="city" id="city" type="text" autofocus="true" class="form-input" />
-                  <button type="submit" class="btn bg-primary text-white text-center">Search</button>
-                </form>
-              </div>
-        
-              <!--Past City Searches-->
-              <div class="card">
-              </div>
-        
-            <!--Search Results Current Day-->
-            <div class="col-12 col-md-8">
-              <h2 class="subtitle"><span id="search-response"></span></h2>
-              <div id="currentDayWeather" class="outline-solid">
-        
-              </div>
-            </div>
+    <main>
+        <!--Creates Overall Grid-->
+        <div class="container">
+            <div class="row">
+                <!--Begin Search for a City-->
+                <div class="col-sm-4" id="searchCity">
+                    <form class="form-inline" id="search">
+                        <div id="title">Search for a City:</div>
+                        <input class="form-control" id="searchCity" type="search" placeholder="San Diego" aria-label="Search">
+                        <button class="btn btn-primary text-white text-center" type="submit" id="searchBtn">Search</button>
+                    </form>
+                    <!--To Save previous city searches (utilize local storage)-->
+                    <div id="saveCities">
+                    </div>
+                </div>
 
-            <!--5-Day Forecast-->
-          </main>
+                <!--Begin Current City Real Time Search Results-->
+                <div class="col-sm-8">
+                    <!--Creating a row within a column-->
+                    <div class="row">
+                        <div class="col-sm-12"></div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h2 id="searchedCity"></h2>
+                                    <div id="searchedCityResults"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Staying within the row within the col-sm-8 to keep the cards under the featured city-->
+                        <div class="col-sm-12" id="5dayForcast">
+                            <h3>5-Day Forcast:</h3>
+                            <div class="card-deck" id="5dayForcastCards"></div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+            
+    </main>
 
-    </div>
+    <!--Links to jQuery-->
+    <!--Links to Moment-->
+    <!--Links to External JavaScript-->
     
 </body>
 </html>
