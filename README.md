@@ -19,3 +19,7 @@ BootStrap aria label
 
 https://getbootstrap.com/docs/4.0/components/card/
 Bootstrap Cards Information and CARD DECK INFO
+
+Javascript error functions
+https://www.w3schools.com/js/js_errors.asp
+
